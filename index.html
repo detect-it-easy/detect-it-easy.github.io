@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detect It Easy (DIE) - Professional file type identification and analysis tool for security researchers and developers">
+    <meta name="theme-color" content="#FF6B4A">
+    <title>Detect It Easy - Advanced File Analysis Tool</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="loading">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-glass">
+            <span class="preloader-logo">Detect It Easy</span>
+            <div class="preloader-line"><span class="preloader-line-inner"></span></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container">
+            <a href="#" class="nav-brand">Detect It Easy</a>
+            <div class="nav-links">
+                <a href="https://github.com/horsicq/Detect-It-Easy" target="_blank" class="nav-link">GitHub</a>
+                <a href="https://github.com/horsicq/Detect-It-Easy/wiki" target="_blank" class="nav-link">Documentation</a>
+                <a href="https://github.com/horsicq/DIE-engine/releases" target="_blank" class="btn btn-primary">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image-wrapper fade-in">
+                    <img src="art.png" alt="Detect It Easy" class="hero-image">
+                </div>
+                
+                <h1 class="hero-title fade-in-up delay-1">Detect It Easy</h1>
+                <p class="hero-subtitle fade-in-up delay-1">Professional File Analysis Tool</p>
+                <p class="hero-description fade-in-up delay-2">
+                    Industry-leading file type identification and analysis. Trusted by security researchers, malware analysts, and developers worldwide.
+                </p>
+                
+                <!-- Latest Release Badge -->
+                <div id="latest-release-badge" class="latest-release-badge fade-in-up delay-2" style="display:none;"></div>
+                
+                <div class="hero-actions fade-in-up delay-2">
+                    <a href="https://github.com/horsicq/DIE-engine/releases" target="_blank" class="btn btn-primary btn-lg">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download Now
+                    </a>
+                    <a href="https://github.com/horsicq/Detect-It-Easy" target="_blank" class="btn btn-secondary btn-lg">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+                
+                <div class="hero-stats fade-in-up delay-3">
+                    <div class="stat-item glass">
+                        <div class="stat-value" id="hero-stars">10,200+</div>
+                        <div class="stat-label">GitHub Stars</div>
+                    </div>
+                    <div class="stat-item glass">
+                        <div class="stat-value" id="hero-forks">879+</div>
+                        <div class="stat-label">Forks</div>
+                    </div>
+                    <div class="stat-item glass">
+                        <div class="stat-value" id="hero-downloads">1M+</div>
+                        <div class="stat-label">Downloads</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Features</span>
+                <h2 class="section-title">Powerful Analysis Capabilities</h2>
+                <p class="section-subtitle">Everything you need for professional file type detection and binary analysis in one comprehensive tool.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Flexible Signatures</h3>
+                    <p class="feature-description">Create and customize detection signatures using JavaScript-based scripting system for maximum flexibility.</p>
+                </div>
+                
+                <div class="feature-card fade-in-up delay-1">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Cross-Platform</h3>
+                    <p class="feature-description">Native support for Windows, macOS, and Linux. One tool across all your development environments.</p>
+                </div>
+                
+                <div class="feature-card fade-in-up delay-2">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Deep Analysis</h3>
+                    <p class="feature-description">Advanced detection engine identifies packers, compilers, cryptors, and protectors with high accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-in-up">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" id="detailed-stars">10,200</div>
+                    <div class="stat-text">Stars</div>
+                </div>
+                
+                <div class="stat-card fade-in-up delay-1">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="18" r="3"/>
+                            <circle cx="6" cy="6" r="3"/>
+                            <circle cx="18" cy="6" r="3"/>
+                            <path d="M6 9v3c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9"/>
+                            <line x1="12" y1="14" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" id="detailed-forks">879</div>
+                    <div class="stat-text">Forks</div>
+                </div>
+                
+                <div class="stat-card fade-in-up delay-2">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" id="detailed-downloads">1,000,000+</div>
+                    <div class="stat-text">Downloads</div>
+                </div>
+                
+                <div class="stat-card fade-in-up delay-3">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number" id="detailed-issues">--</div>
+                    <div class="stat-text">Open Issues</div>
+                </div>
+            </div>
+
+            <!-- Language Breakdown -->
+            <div class="languages-section">
+                <h4 class="languages-title">Repository Languages</h4>
+                <div class="languages-bar" id="languages-bar"></div>
+                <div class="languages-legend" id="languages-legend"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Use Cases</span>
+                <h2 class="section-title">Built for Professionals</h2>
+                <p class="section-subtitle">From security research to software development, DIE adapts to your workflow.</p>
+            </div>
+            
+            <div class="use-cases-grid">
+                <div class="use-case-card fade-in-up">
+                    <span class="use-case-number">01</span>
+                    <h3 class="use-case-title">Malware Analysis</h3>
+                    <p class="use-case-description">Identify packers, protectors, and obfuscation techniques used in malicious software samples.</p>
+                </div>
+                
+                <div class="use-case-card fade-in-up delay-1">
+                    <span class="use-case-number">02</span>
+                    <h3 class="use-case-title">Reverse Engineering</h3>
+                    <p class="use-case-description">Quickly determine compiler, linker, and build information to streamline your RE workflow.</p>
+                </div>
+                
+                <div class="use-case-card fade-in-up delay-2">
+                    <span class="use-case-number">03</span>
+                    <h3 class="use-case-title">Security Research</h3>
+                    <p class="use-case-description">Analyze suspicious files and validate file integrity in security-critical environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="platforms-content">
+                <div class="platforms-os">
+                    <h3 class="platforms-heading">Supported Platforms</h3>
+                    <div class="os-grid">
+                        <div class="os-item">
+                            <span class="os-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                                </svg>
+                            </span>
+                            <span class="os-name">Windows</span>
+                        </div>
+                        <div class="os-item">
+                            <span class="os-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M6 9l4 3-4 3"/>
+                                    <line x1="12" y1="15" x2="18" y2="15"/>
+                                </svg>
+                            </span>
+                            <span class="os-name">Linux</span>
+                        </div>
+                        <div class="os-item">
+                            <span class="os-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                </svg>
+                            </span>
+                            <span class="os-name">macOS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="platforms-formats">
+                    <h3 class="platforms-heading">Supported Formats</h3>
+                    <div class="formats-tags">
+                        <span class="format-tag">PE (EXE, DLL)</span>
+                        <span class="format-tag">ELF</span>
+                        <span class="format-tag">Mach-O</span>
+                        <span class="format-tag">APK</span>
+                        <span class="format-tag">DEX</span>
+                        <span class="format-tag">JAR</span>
+                        <span class="format-tag">ZIP</span>
+                        <span class="format-tag">RAR</span>
+                        <span class="format-tag">7z</span>
+                        <span class="format-tag">PDF</span>
+                        <span class="format-tag">MSI</span>
+                        <span class="format-tag">NE</span>
+                        <span class="format-tag format-tag-etc">etc.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Trusted By</span>
+                <h2 class="section-title">Our Partners</h2>
+                <p class="section-subtitle">Recognized and integrated by industry-leading security platforms and organizations.</p>
+            </div>
+            
+            <div class="partners-grid">
+                <a href="https://www.microsoft.com" target="_blank" class="partner-card fade-in-up">
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                        </svg>
+                    </div>
+                    <span class="partner-name">Microsoft</span>
+                </a>
+                
+                <a href="https://www.google.com" target="_blank" class="partner-card fade-in-up delay-1">
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
+                    </div>
+                    <span class="partner-name">Google</span>
+                </a>
+                
+                <a href="https://www.virustotal.com" target="_blank" class="partner-card fade-in-up delay-2">
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="partner-name">VirusTotal</span>
+                </a>
+                
+                <a href="https://www.kali.org" target="_blank" class="partner-card fade-in-up delay-3">
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </div>
+                    <span class="partner-name">Kali Linux</span>
+                </a>
+                
+                <a href="https://remnux.org" target="_blank" class="partner-card fade-in-up">
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span class="partner-name">REMnux</span>
+                </a>
+                
+                <a href="https://github.com/mandiant/flare-vm" target="_blank" class="partner-card fade-in-up delay-1">
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <span class="partner-name">Flare VM</span>
+                </a>
+                
+                <a href="https://any.run" target="_blank" class="partner-card fade-in-up delay-2">
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <span class="partner-name">AnyRun</span>
+                </a>
+                
+                <a href="https://threat.rip" target="_blank" class="partner-card fade-in-up delay-3">
+                    <div class="partner-logo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4"/>
+                            <path d="M12 8h.01"/>
+                        </svg>
+                    </div>
+                    <span class="partner-name">THREAT.RIP</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-orb cta-orb-1"></div>
+                <div class="cta-orb cta-orb-2"></div>
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-description">Download Detect It Easy and join thousands of security professionals who trust DIE for their file analysis needs.</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/horsicq/DIE-engine/releases" target="_blank" class="btn btn-primary btn-lg">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download Latest Release
+                    </a>
+                    <a href="https://github.com/horsicq/Detect-It-Easy/wiki" target="_blank" class="btn btn-secondary btn-lg">
+                        Read Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commits Tracker Section -->
+    <section class="commits-tracker">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Activity</span>
+                <h2 class="section-title">Commits Tracker</h2>
+                <p class="section-subtitle">Follow the latest development activity in real-time from the GitHub repository.</p>
+            </div>
+            <div class="commits-timeline" id="commits-list">
+                <div class="commits-loading">Loading commits...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contributors Section -->
+    <section class="contributors-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Community</span>
+                <h2 class="section-title">Top Contributors</h2>
+                <p class="section-subtitle">The people behind the project making DIE better every day.</p>
+            </div>
+            <div class="contributors-grid" id="contributors-list">
+                <div class="commits-loading">Loading contributors...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">Detect It Easy</div>
+                    <p class="footer-text">Open-source file type identification tool. Built with passion by the security community.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/horsicq/DIE-engine/releases">Downloads</a></li>
+                        <li><a href="https://github.com/horsicq/Detect-It-Easy/wiki">Documentation</a></li>
+                        <li><a href="https://github.com/horsicq/Detect-It-Easy/releases">Changelog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/horsicq/Detect-It-Easy">GitHub</a></li>
+                        <li><a href="https://github.com/horsicq/Detect-It-Easy/issues">Issues</a></li>
+                        <li><a href="https://github.com/horsicq/Detect-It-Easy/discussions">Discussions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/horsicq/Detect-It-Easy#readme">Getting Started</a></li>
+                        <li><a href="https://github.com/horsicq/Detect-It-Easy/wiki/How-to-write-your-scripts">Write Scripts</a></li>
+                        <li><a href="https://github.com/horsicq/Detect-It-Easy/blob/master/LICENSE">License</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    Open Source Project by <a href="https://github.com/horsicq" target="_blank">hors</a> · MIT License<br>
+                    Website developed with ❤️ by <a href="https://github.com/DosX-dev">DosX</a>
+                    <br>
+                    <i>(build_dosx11022026.02_stable)</i>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
